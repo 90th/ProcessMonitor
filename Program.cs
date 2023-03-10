@@ -65,7 +65,7 @@ namespace ProcessMonitor {
             while (true) {
                 double cpuUsage = Process.GetCurrentProcess().TotalProcessorTime.TotalSeconds;
                 double memUsage = Process.GetCurrentProcess().PrivateMemorySize64 / 1024.0 / 1024.0;
-                Console.Title = string.Format("Process Monitor - CPU: {0:F2}% MEM: {1:F2}%", cpuUsage, memUsage);
+                Console.Title = string.Format("Process Monitor - Time: {0:F2}s MEM: {1:F2}%", cpuUsage, memUsage);
 
                 Thread.Sleep(1000);
             }
