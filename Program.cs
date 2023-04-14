@@ -61,14 +61,6 @@ namespace ProcessMonitor {
             t1.Start();
             t2.Start();
 
-            // Update the console title with Time and memory usage every second
-            while (true) {
-                double cpuUsage = Process.GetCurrentProcess().TotalProcessorTime.TotalSeconds;
-                double memUsage = Process.GetCurrentProcess().PrivateMemorySize64 / 1024.0 / 1024.0;
-                Console.Title = string.Format("Process Monitor - Time: {0:F2}s MEM: {1:F2}%", cpuUsage, memUsage);
-
-                Thread.Sleep(1000);
-            }
         }
     }
 }
